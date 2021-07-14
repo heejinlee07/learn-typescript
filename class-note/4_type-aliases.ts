@@ -16,7 +16,16 @@ var seho: Person = {
   age: 30,
 };
 
+//type별칭을 통한 타입정의
 var seho2: Person2 = {
   name: 'seho',
   age: 30,
 };
+
+type MyString = string;
+var str: MyString = 'hello';
+
+type Todo = { id: string; title: string; done: boolean };
+function getTodo(todo: Todo) {
+  return todo;
+}
