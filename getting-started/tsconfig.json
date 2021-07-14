@@ -2,6 +2,7 @@
   "complierOptions": {
     "allowJs": true,
     "checkJs": true,
-    "noImplicitAny": true
+    "noImplicitAny": true,
+    "lib": ["es6"]
   }
 }
