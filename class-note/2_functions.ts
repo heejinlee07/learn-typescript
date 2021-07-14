@@ -15,7 +15,7 @@ function func(a: number, b: number): number {
   return a + b;
 }
 
-sum(10, 20); //30
+func(10, 20); //30
 
 // 지정된 파라미터 개수보다 적거나 큰 인자를 전달하면 에러 발생
 // Expected 0-2 arguments, but got 4.
