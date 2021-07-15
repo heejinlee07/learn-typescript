@@ -29,7 +29,7 @@ function logMessage(value: string | number) {
 logMessage('hello');
 logMessage(100);
 
-interface Developer {
+interface Developers {
   name: string;
   skill: string;
 }
@@ -39,13 +39,13 @@ interface Person {
   age: number;
 }
 
-function askSomeone(someone: Developer | Person) {
-  //Developer 또는 Person이 가지고 있는 속성을 모두 뱉어줄 것이라 생각된다. someone.name, someone.skill, someone.age
+function askSomeone(someone: Developers | Person) {
+  //Developers 또는 Person이 가지고 있는 속성을 모두 뱉어줄 것이라 생각된다. someone.name, someone.skill, someone.age
   //! 하지만 실질적으로는 두 인터페이스가 공통적으로 가지고 있는 someone.name에만 접근할 수 있다.
   someone.name;
 }
 
-function askSomeBody(someone: Developer & Person) {
+function askSomebody(someone: Developers & Person) {
   //eveloper 또는 Person이 가지고 있는 속성을 모두 사용가능.
   someone.name;
   someone.skill;
@@ -56,5 +56,10 @@ function askSomeBody(someone: Developer & Person) {
 var seho: string | number | boolean;
 var seho2: string & number & boolean;
 
-askSomeone({ name: 'ts', skill: '웹개발자' });
-askSomeone({ name: 'javascript', age: 100 });
+//인터섹션 타입
+//Developers와 Person이 가지고 있는 공통의 속성을 모두 넘겨줘야 에러가 발생하지 않음.
+askSomebody({ name: 'ts', skill: '웹개발자', age: 20 });
+
+//유니언타입
+askSomeone({ name: 'javaScript', age: 100 });
+askSomeone({ name: 'typeScript', skill: 'frontEnd' });
