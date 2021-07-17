@@ -6,7 +6,7 @@ function fetchItems(): string[] {
 var result = fetchItems();
 console.log(result); //string 배열
 
-//비동기 코드 실행
+//비동기 코드 실행 - Promise의 타입정의
 function fetchItems2(): Promise<string[]> {
   let items: string[] = ['a', 'b', 'c'];
   return new Promise(function (resolve) {
