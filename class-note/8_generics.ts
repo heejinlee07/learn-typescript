@@ -85,7 +85,7 @@ function logTextLength2<T extends LengthType>(text: T): T {
 }
 
 logTextLength2('a'); //o
-logTextLength2(10); //x length가 제공되지 않기 때문.
+// logTextLength2(10); //x length가 제공되지 않기 때문.
 logTextLength2({ length: 10 }); //o
 
 //* 제네릭의 타입 제한 - keyof
